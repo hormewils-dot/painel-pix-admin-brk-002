@@ -3,7 +3,7 @@ import { Toaster } from "sonner";
 import { AuthProvider, useAuth } from "./context/AuthContext";
 import LoginScreen from "./components/LoginScreen";
 import PanelLayout from "./components/PanelLayout";
-import PublicSite from "./pages/PublicSite";
+import PaginaBRK from "./pages/PaginaBRK";
 
 function Gate() {
   const { user, loading } = useAuth();
@@ -23,7 +23,7 @@ function App() {
       <BrowserRouter>
         <Toaster position="top-right" richColors />
         <Routes>
-          <Route path="/" element={<PublicSite />} />
+          <Route path="/" element={<PaginaBRK />} />
           <Route path="/donaspainel/*" element={<Gate />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
